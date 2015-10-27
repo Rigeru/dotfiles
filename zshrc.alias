@@ -1,0 +1,21 @@
+### ls
+case "${OSTYPE}" in
+# MacOSX
+darwin*)
+    alias ls="ls -G -w -F"
+    ;;
+# Linux
+linux*)
+    alias ls="ls --color -F"
+    ;;
+esac
+
+alias la="ls -la"
+alias ll="ls -l"
+
+alias mmv='noglob zmv -W'
+
+#alias jdk6='env JAVA_HOME=$JAVA_1_6_HOME PATH=$JAVA_1_6_HOME/bin:"$PATH" JDK_SET="1"'
+#alias jdk7='env JAVA_HOME=$JAVA_1_7_HOME PATH=$JAVA_1_7_HOME/bin:"$PATH" JDK_SET="1"'
+#alias jdk8='env JAVA_HOME=$JAVA_1_8_HOME PATH=$JAVA_1_8_HOME/bin:"$PATH" JDK_SET="1"'
+
