@@ -1,5 +1,7 @@
 export SITE_PACKAGES=$HOME/.local/lib/python2.7/site-packages/
 export PATH=~/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/local/lib:/usr/local/lib64:$LD_LIBRARY_PATH
+export PATH=$HOME/local/bin:$PATH
 
 ## Ruby
 ## list all available versions
@@ -8,6 +10,14 @@ export PATH=~/bin:$PATH
 ## $ rbenv install 2.0.0-p247
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+
+#----- pyenv
+export PYENV_ROOT="$HOME/local/pyenv"
+if [ -d "${PYENV_ROOT}" ]; then
+   export PATH=${PYENV_ROOT}/bin:$PATH
+   eval "$(pyenv init -)"
+fi
 
 ## keyboard
 # setxkbmap -option ctrl:swapcaps,altwin:swap_alt_win -model microsoft4000

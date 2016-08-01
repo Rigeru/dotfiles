@@ -7,12 +7,6 @@ endif
 " Required:
 call neobundle#begin(expand('~/.vim/bundle/'))
 
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-call neobundle#end()
-
 " https://github.com/Shougo/unite.vim
 " http://bling.github.io/blog/2013/06/02/unite-dot-vim-the-plugin-you-didnt-know-you-need/
 " Unite {{{{
@@ -68,6 +62,12 @@ call neobundle#end()
   NeoBundle 'sickill/vim-monokai'
   NeoBundle 'endel/vim-github-colorscheme'
 " }}}
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+call neobundle#end()
 
 " Required:
 filetype plugin indent on
